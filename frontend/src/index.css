@@ -1,0 +1,7 @@
+body {
+  --background-color: white;
+  --header-footer-color: #264653;
+  --sidebar-color: #2a9d8f;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
