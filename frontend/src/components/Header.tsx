@@ -30,20 +30,25 @@ export function Header({ navBarItems, menuItems, handleNavigation }: Props) {
   const linkDataPopperPlacementForUl = isMenuOpen ? "bottom-start" : "";
 
   return (
-    <div className="container">
+    <div
+      style={{
+        borderBottom: "1px solid #e1e4e8",
+        width: "100%",
+        margin: "0px",
+        padding: "0px 20px",
+      }}
+    >
       <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start my-2">
         <a
           href="/"
           className="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
         >
           <img
-            src="../../cup-hot-fill.svg" // Use the imported logo as the src
-            alt="Vite Logo" // Provide alt text for accessibility
+            src="../../logo.svg" // Use the imported logo as the src
             className="bi me-2" // Apply any additional classes if needed
             width="40" // Set the width as needed
             height="32" // Set the height as needed
             role="img" // Set the role as needed
-            aria-label="Vite" // Provide an aria-label if necessary
           />
         </a>
 

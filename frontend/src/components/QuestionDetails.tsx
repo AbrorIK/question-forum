@@ -1,14 +1,18 @@
 import { Answer } from "../types/Answer";
 import { Question } from "../types/Question";
+import { InputBar } from "./InputBar";
 
 interface Props {
   question: Question;
+  fetchData: () => void;
 }
 
-export function QuestionDetails({ question }: Props) {
-  console.log(question.answers);
+export function QuestionDetails({ question, fetchData }: Props) {
   return (
-    <div id="page-content-wrapper">
+    <div
+      id="page-content-wrapper"
+      style={{ width: "100%", padding: "0px 100px" }}
+    >
       <div className="container-fluid">
         <h1 className="mt-4">{question?.title}</h1>
         <p>{question?.text}</p>
@@ -24,6 +28,7 @@ export function QuestionDetails({ question }: Props) {
           </a>
         ))}
       </div>
+      {!question && <InputBar fetchData={fetchData} />}
     </div>
   );
 }
